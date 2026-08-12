@@ -67,7 +67,7 @@ public class ConsultantController {
     public String showAddForm(Model model) {
         model.addAttribute("consultant", new Consultant());
         model.addAttribute("formTitle", "Add Consultant");
-        return "consultatns/form";
+        return "consultants/form";
     }
 
     // GET
