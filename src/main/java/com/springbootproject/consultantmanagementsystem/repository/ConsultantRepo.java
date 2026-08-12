@@ -11,7 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ConsultantRepo extends JpaRepository<Consultant, Long> {
-    Page<Consultant> find(String name, String technology, Pageable pageable);
+    Page<Consultant> findByNameContainingIgnoreCaseOrTechnologyContainingIgnoreCase(String name, String technology, Pageable pageable);
 
     long countByStatus(String status);
 }

@@ -43,7 +43,7 @@ public class ConsultantServiceImpl implements ConsultantService {
             return consultantRepository.findAll(pageable);
         }
         return consultantRepository
-                .find(keyword, keyword, pageable);
+                .findByNameContainingIgnoreCaseOrTechnologyContainingIgnoreCase(keyword, keyword, pageable);
     }
 
     @Override
