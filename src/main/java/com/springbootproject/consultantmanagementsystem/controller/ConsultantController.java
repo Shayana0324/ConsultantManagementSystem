@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
 
 
-import java.util.Optional;
-
 @Controller
 @RequestMapping("/consultants")
 public class ConsultantController {
@@ -87,9 +85,9 @@ public class ConsultantController {
     // POST
     // /consultants/save
     // Handle create and update
-    // Update existing row if it's set, if consultant.id is null -> set a new row
+    // To Update existing row if it's set, if consultant.id is null -> set a new row
     @PostMapping("/save")
-    public String saveConsultant(@Valid @ModelAttribute("consultant" Consultant consultant,
+    public String saveConsultant(@Valid @ModelAttribute("consultant") Consultant consultant,
                                  BindingResult result,
                                  Model model) {
         if(result.hasErrors()) {
