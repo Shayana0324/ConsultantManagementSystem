@@ -95,7 +95,7 @@ public class ConsultantController {
             return "consultants/form";
         }
         consultantService.save(consultant);
-        return "redirect:consultants/saved=true";
+        return "redirect:/consultants?saved=true";
 
     }
 
@@ -116,6 +116,6 @@ public class ConsultantController {
     @PostMapping("/delete/{id}")
     public String deleteConsultant(@PathVariable Long id) {
         consultantService.deleteById(id);
-        return "redirect:/consutlants?deleted=true";
+        return "redirect:/consultants?deleted=true";
     }
 }
